@@ -8,12 +8,17 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Route path="/" exact>
-          <Home />
-        </Route>
-        <Route path="/login" exact>
-          <Login />
-        </Route>
+        <Switch>
+          <Route path="/" exact>
+            <Home />
+          </Route>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="*">
+            <Error />
+          </Route>
+        </Switch>
       </Router>
     </div>
   );

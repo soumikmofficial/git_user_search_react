@@ -1,7 +1,16 @@
 import React from "react";
+import { Info, Search, Navbar, Repos, User } from "../components/components";
 
 function Home() {
-  return <div>Home page</div>;
+  return (
+    <main>
+      <Navbar />
+      <Search />
+      <Info />
+      <User />
+      <Repos />
+    </main>
+  );
 }
 
 export default Home;
