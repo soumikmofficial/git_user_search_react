@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
 :root {
-  --col-1: blue;
+  --col-1: rgb(28, 7, 51);
+  --col-2: rgb(242, 239, 245);
   --header-font: "Arvo", serif;
   --body-font: "Lato", sans-serif;
 }
@@ -13,4 +14,34 @@
 }
 html {
   font-size: 62.5%;
+  font-family: var(--body-font);
+}
+
+body {
+  background-color: var(--col-1);
+}
+
+.section-container {
+  padding: 1rem 3rem;
+}
+
+/* *********** color styles class**************** */
+.blue {
+  background-color: rgb(178, 198, 211);
+  color: hsl(229, 72%, 32%);
+}
+
+.brown {
+  background-color: rgb(216, 188, 135);
+  color: hsl(39, 73%, 16%);
+}
+
+.red {
+  background-color: rgb(245, 200, 200);
+  color: hsl(0, 68%, 49%);
+}
+
+.green {
+  background-color: rgb(200, 230, 197);
+  color: hsl(123, 100%, 30%);
 }
