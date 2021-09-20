@@ -64,10 +64,9 @@ const Item = ({ icon, label, value, color }) => {
 };
 
 const Wrapper = styled.section`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 1.5rem;
-  font-size: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   article {
     background-color: var(--col-2);
     border-radius: 0.5rem;
@@ -75,26 +74,31 @@ const Wrapper = styled.section`
     display: grid;
     grid-template-columns: 1fr 3fr;
     padding: 1rem 2rem;
+    margin: 1rem;
+    max-width: 180px;
     .icon-container {
-      display: flex;
-      justify-content: center;
       align-items: center;
+      border-radius: 50%;
+      display: flex;
+      font-size: 2rem;
+      height: 4.5rem;
+      justify-content: center;
       margin: 0 auto;
       width: 4.5rem;
-      height: 4.5rem;
-      border-radius: 50%;
     }
     .details-container {
-      padding-left: 3rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      padding-left: 3rem;
+      h3 {
+        font-size: 2.5rem;
+      }
       p {
-        /* margin-top: 0.3rem; */
-        text-transform: capitalize;
         font-size: 1.5rem;
-        opacity: 0.7;
         font-weight: bold;
+        opacity: 0.7;
+        text-transform: capitalize;
       }
     }
   }
