@@ -3,7 +3,7 @@ import React from "react";
 import ReactFC from "react-fusioncharts";
 import FusionCharts from "fusioncharts";
 import Column2D from "fusioncharts/fusioncharts.charts";
-import FusionTheme from "fusioncharts/themes/fusioncharts.theme.fusion";
+import FusionTheme from "fusioncharts/themes/fusioncharts.theme.candy";
 
 function ColumnChart({ data }) {
   ReactFC.fcRoot(FusionCharts, Column2D, FusionTheme);
@@ -15,13 +15,14 @@ function ColumnChart({ data }) {
     dataFormat: "json",
     dataSource: {
       chart: {
-        caption: "Languages",
-        subCaption: "Breakdown of the languages used",
-        theme: "fusion",
+        caption: "Most Liked Repos",
+        subCaption: "Repos to receive most number of starts",
+        theme: "candy",
         decimals: 0,
         pieRadius: "60%",
+        yAxisName: "Stars",
+        xAxisName: "Repos",
       },
-      // Chart Data
       data: data,
     },
   };
