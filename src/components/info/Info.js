@@ -9,7 +9,6 @@ import { GiStack } from "react-icons/gi";
 function Info() {
   const { gitUser } = useGlobalContext();
   const { following, followers, public_gists, public_repos } = gitUser;
-  console.log(public_repos);
   const items = [
     {
       id: 1,

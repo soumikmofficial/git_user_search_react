@@ -42,9 +42,11 @@
   .fetch-count {
     display: grid;
     place-items: center;
+    margin-top: 3rem;
 
     @include desktop {
       justify-self: end;
+      margin-top: 0;
     }
     h2 {
       font-size: 2rem;

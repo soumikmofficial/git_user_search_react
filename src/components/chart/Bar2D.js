@@ -29,7 +29,7 @@ function Bar2D({ data }) {
     },
   };
 
-  return <ReactFC {...chartConfigs} className="column2D" />;
+  return <ReactFC {...chartConfigs} className="bar2D" />;
 }
 
 export default Bar2D;

@@ -3,6 +3,7 @@ import "./card.scss";
 import { useGlobalContext } from "../../context";
 import { GoLocation } from "react-icons/go";
 import { AiOutlineChrome } from "react-icons/ai";
+import { UserInfoContainer, Title } from "../components.style";
 
 function Card() {
   const { gitUser } = useGlobalContext();
@@ -17,8 +18,8 @@ function Card() {
     blog,
   } = gitUser;
   return (
-    <div className="card">
-      <div className="title">User</div>
+    <UserInfoContainer className="card">
+      <Title>User</Title>
       <div className="container">
         <header>
           <div className="img">
@@ -46,7 +47,7 @@ function Card() {
           </div>
         </div>
       </div>
-    </div>
+    </UserInfoContainer>
   );
 }
 

@@ -27,7 +27,7 @@ function ColumnChart({ data }) {
     },
   };
 
-  return <ReactFC {...chartConfigs} className="column2D" />;
+  return <ReactFC {...chartConfigs} className="columnChart" />;
 }
 
 export default ColumnChart;

@@ -1,18 +1,20 @@
 import React from "react";
 import { useGlobalContext } from "../../context";
+import { UserInfoContainer, Title } from "../components.style";
+
 import "./followers.scss";
 function Followers() {
   const { gitFollowers } = useGlobalContext();
   return (
-    <div className="followers">
-      <div className="title">Followers</div>
+    <UserInfoContainer className="followers">
+      <Title>Followers</Title>
       <div className="container">
         <div className="follower-container">
           {gitFollowers.map((follower) => {
             const { html_url, avatar_url, login, id } = follower;
 
             return (
-              <div className="follower">
+              <div className="follower" key={id}>
                 <div className="img-container">
                   <img src={avatar_url} alt="" />
                 </div>
@@ -25,7 +27,7 @@ function Followers() {
           })}
         </div>
       </div>
-    </div>
+    </UserInfoContainer>
   );
 }
 

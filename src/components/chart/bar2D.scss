@@ -1,0 +1,11 @@
+@import "../../global.scss";
+
+.bar2D {
+  @include desktop {
+    order: 2;
+    svg {
+      border-radius: 0.5rem;
+      min-width: 429px;
+    }
+  }
+}

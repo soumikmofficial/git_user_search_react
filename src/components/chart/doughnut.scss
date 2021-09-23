@@ -2,10 +2,9 @@
 
 .doughnut {
   @include desktop {
-    grid-row: 2/3;
+    order: 3;
     svg {
       border-radius: 0.5rem;
-      min-width: 429px;
     }
   }
 }

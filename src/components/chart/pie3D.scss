@@ -1,4 +1,7 @@
 @import "../../global.scss";
 
 .pie3D {
+  @include desktop {
+    order: 1;
+  }
 }
