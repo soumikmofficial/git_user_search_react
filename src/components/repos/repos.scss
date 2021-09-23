@@ -5,9 +5,9 @@
   width: 100%;
 
   @include desktop {
+    grid-gap: 2rem;
     grid-template-columns: 35% 65%;
     grid-template-rows: 1fr 1fr;
-    grid-gap: 2rem;
 
     svg {
       border-radius: 0.5rem;
