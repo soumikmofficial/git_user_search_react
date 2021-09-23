@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "search.scss",
+        "../../global.scss"
+    ],
+    "names": [],
+    "file": "search.css"
+}

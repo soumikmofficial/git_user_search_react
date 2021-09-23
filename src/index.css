@@ -3,8 +3,10 @@
 :root {
   --col-1: rgb(28, 7, 51);
   --col-2: rgb(242, 239, 245);
+  --col-3: rgb(66, 27, 107);
   --header-font: "Arvo", serif;
   --body-font: "Lato", sans-serif;
+  --border-radius-small: 0.8rem;
 }
 
 * {
@@ -21,8 +23,20 @@ body {
   background-color: var(--col-1);
 }
 
+a {
+  text-decoration: none;
+}
+
 .section-container {
   padding: 1rem 3rem;
+  display: flex;
+  justify-content: center;
+  background: red;
+}
+
+.User {
+  display: flex;
+  background: #000;
 }
 
 /* *********** color styles class**************** */
@@ -44,4 +58,8 @@ body {
 .green {
   background-color: rgb(200, 230, 197);
   color: hsl(123, 100%, 30%);
+}
+
+flex {
+  display: flex;
 }

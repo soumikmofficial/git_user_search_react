@@ -4,8 +4,8 @@ import { Info, Search, Navbar, Repos, User } from "../components/components";
 function Home() {
   return (
     <main>
-      <Navbar />
-      <Search />
+      {/* <Navbar /> */}
+      {/* <Search /> */}
       <Info />
       <User />
       <Repos />

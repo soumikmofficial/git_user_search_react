@@ -1,0 +1,83 @@
+@import "../../global.scss";
+
+.card {
+  .title {
+    color: $col-1;
+    background: white;
+    width: fit-content;
+    padding: 0.5rem 2rem;
+    font-size: 1.3rem;
+    border-radius: $border-radius-small $border-radius-small 0 0;
+  }
+  .container {
+    min-width: 417px;
+    background-color: white;
+    color: var(--col-1);
+    border-radius: 0 $border-radius-small $border-radius-small
+      $border-radius-small;
+    max-width: 417px;
+    height: 25rem;
+    padding: 3rem;
+    header {
+      display: flex;
+
+      .img {
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .name {
+        padding: 0 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        h4 {
+          text-transform: capitalize;
+          font-size: 1.8rem;
+        }
+        p {
+          opacity: 0.7;
+          font-size: 1.3rem;
+        }
+      }
+      .follow {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        a {
+          background-color: var(--col-3);
+          color: white;
+          font-size: 1.2rem;
+          border: 1px solid blue;
+          padding: 0.4rem 1rem;
+          border-radius: 1.5rem;
+          font-weight: 600;
+        }
+      }
+    }
+    .bio {
+      font-size: 1.3rem;
+      padding: 2rem 0;
+    }
+    .others {
+      .other-details {
+        display: flex;
+        align-items: center;
+        .icon {
+          font-size: 1.5rem;
+          margin: 0.3rem 1rem 0.3rem 0;
+        }
+        p,
+        a {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
