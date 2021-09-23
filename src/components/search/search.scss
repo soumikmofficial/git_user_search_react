@@ -1,1 +1,53 @@
 @import "../../global.scss";
+
+.search {
+  color: white;
+  width: 100%;
+  display: grid;
+  grid-gap: 2rem;
+  margin: 3rem 0;
+
+  @include desktop {
+    grid-template-columns: 4fr 1fr;
+    width: 80%;
+    margin: 3rem auto;
+  }
+
+  .search-section {
+    display: flex;
+    justify-content: center;
+
+    form {
+      width: 100%;
+      display: flex;
+      input {
+        flex: 0.8;
+        padding: 1rem 2rem;
+        border: none;
+        outline: none;
+        margin-right: 4%;
+        border-radius: $border-radius-small;
+        font-size: 1.5rem;
+        height: 4rem;
+      }
+      button {
+        border: none;
+        flex: 0.2;
+        border-radius: $border-radius-small;
+        background: rgb(167, 113, 192);
+        color: white;
+      }
+    }
+  }
+  .fetch-count {
+    display: grid;
+    place-items: center;
+
+    @include desktop {
+      justify-self: end;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+  }
+}

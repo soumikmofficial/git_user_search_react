@@ -3,7 +3,7 @@ import React from "react";
 import ReactFC from "react-fusioncharts";
 import FusionCharts from "fusioncharts";
 import Column2D from "fusioncharts/fusioncharts.charts";
-import FusionTheme from "fusioncharts/themes/fusioncharts.theme.candy";
+import FusionTheme from "fusioncharts/themes/fusioncharts.theme.zune";
 
 function Bar2D({ data }) {
   ReactFC.fcRoot(FusionCharts, Column2D, FusionTheme);
@@ -17,11 +17,13 @@ function Bar2D({ data }) {
       chart: {
         caption: "Most Forked Repos",
         subCaption: "Breakdown of repos depending on forks count",
-        theme: "candy",
+        theme: "zune",
         decimals: 0,
         pieRadius: "60%",
         yAxisName: "Forks",
         xAxisName: "Repos",
+        baseFontSize: "1.3rem",
+        valueFontSize: "1.3rem",
       },
       data: data,
     },

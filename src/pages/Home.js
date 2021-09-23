@@ -5,7 +5,7 @@ function Home() {
   return (
     <main>
       {/* <Navbar /> */}
-      {/* <Search /> */}
+      <Search />
       <Info />
       <User />
       <Repos />

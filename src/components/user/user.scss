@@ -1,7 +1,14 @@
+@import "../../global.scss";
+
 .user {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 3rem;
   grid-gap: 3rem;
+  margin: 5rem auto;
+
+  @include desktop {
+    width: 80%;
+    justify-content: space-between;
+  }
 }
