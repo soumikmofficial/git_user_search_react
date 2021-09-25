@@ -1,17 +1,7 @@
 import React from "react";
-import styled from "styled-components";
-
+import "./navbar.scss";
 function Navbar() {
-  return (
-    <Wrapper>
-      <div>navbar comp</div>
-    </Wrapper>
-  );
+  return <section className="navbar">The nav</section>;
 }
-
-const Wrapper = styled.nav`
-  font-size: 2rem;
-  color: var(--col-1);
-`;
 
 export default Navbar;

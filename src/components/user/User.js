@@ -6,8 +6,8 @@ import Followers from "../followers/Followers";
 function User() {
   return (
     <div className="user">
-      <Card />
-      <Followers />
+      <Card id="card" />
+      <Followers id="followers" />
     </div>
   );
 }

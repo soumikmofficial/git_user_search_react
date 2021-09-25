@@ -3,11 +3,13 @@
 .user {
   display: flex;
   flex-wrap: wrap;
-  grid-gap: 3rem;
   justify-content: center;
   margin: 5rem auto;
+  & article {
+    margin: 3rem 0;
+  }
 
   @include desktop {
-    width: 80%;
+    justify-content: space-around;
   }
 }

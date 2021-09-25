@@ -70,14 +70,13 @@ function Repos() {
 
   starsReceived = Object.values(starsReceived).slice(-5).reverse();
   forks = Object.values(forks).slice(-5).reverse();
-  console.log(forks);
 
   return (
     <div className="repos">
-      <Pie3D data={languages} />
-      <Doughnut data={stars} />
-      <ColumnChart data={starsReceived} />
-      <Bar2D data={forks} />
+      <Pie3D data={languages} className="chartGrid" />
+      <Doughnut data={stars} className="chartGrid" />
+      <ColumnChart data={starsReceived} className="chartGrid" />
+      <Bar2D data={forks} className="chartGrid" />
     </div>
   );
 }

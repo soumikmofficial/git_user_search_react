@@ -1,13 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-// function UserInfoContainer() {
-//   return <div>User info container</div>;
-// }
-
 const UserInfoContainer = styled.article`
-  width: 45%;
-  min-width: 417px;
+  width: 417px;
 `;
 
 const Title = styled.div`
