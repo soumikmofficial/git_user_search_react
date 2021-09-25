@@ -27,6 +27,8 @@ function Doughnut({ data }) {
         pieRadius: "60%",
         theme: "candy",
         showPercentValues: 0,
+        chartLeftMargin: "40",
+        chartRightMargin: "40",
       },
       data: data,
     },

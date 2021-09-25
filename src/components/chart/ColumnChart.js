@@ -22,6 +22,8 @@ function ColumnChart({ data }) {
         pieRadius: "60%",
         yAxisName: "Stars",
         xAxisName: "Repos",
+        chartLeftMargin: "40",
+        chartRightMargin: "40",
       },
       data: data,
     },

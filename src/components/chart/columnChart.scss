@@ -1,6 +1,7 @@
 @import "../../global.scss";
 
 .columnChart {
+  // width: 80%;
   @include desktop {
     order: 4;
   }

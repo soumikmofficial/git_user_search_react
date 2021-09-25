@@ -21,6 +21,8 @@ function Pie3D({ data }) {
         theme: "fusion",
         decimals: 0,
         pieRadius: "60%",
+        chartLeftMargin: "40",
+        chartRightMargin: "40",
       },
       // Chart Data
       data: data,

@@ -24,6 +24,8 @@ function Bar2D({ data }) {
         xAxisName: "Repos",
         baseFontSize: "1.3rem",
         valueFontSize: "1.3rem",
+        chartLeftMargin: "40",
+        chartRightMargin: "40",
       },
       data: data,
     },

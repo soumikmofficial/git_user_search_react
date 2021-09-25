@@ -5,7 +5,7 @@
 
   @include desktop {
     margin: 0 auto;
-    grid-template-columns: 35% 65%;
+    grid-template-columns: 2fr 3fr;
     grid-template-rows: 1fr 1fr;
 
     svg {
