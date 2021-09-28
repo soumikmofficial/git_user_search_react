@@ -13,9 +13,9 @@ const AppProvider = ({ children }) => {
   const [gitRepos, setGitRepos] = useState(mockRepos);
   const [loading, setLoading] = useState(false);
   const [requests, setRequests] = useState(0);
-
   const [error, setError] = useState({ show: false, message: "" });
 
+  // *the number of requests left per hour
   const getRequests = () => {
     axios(`${rootUrl}/rate_limit`)
       .then(({ data }) => {
@@ -35,6 +35,7 @@ const AppProvider = ({ children }) => {
     setError({ show, message });
   };
 
+  // *get the user from search
   const fetchUser = async (user) => {
     setLoading(true);
     const url = `${rootUrl}/users/${user}`;
@@ -42,8 +43,14 @@ const AppProvider = ({ children }) => {
     const response = await axios.get(url).catch((err) => console.log(err));
 
     if (response) {
+      const { login, followers_url } = response.data;
       setGitUser(response.data);
-      console.log(response.data);
+
+      // todo: get repos information
+      axios(`${url}/repos?per_page=100`).then((res) => setGitRepos(res.data));
+
+      // todo: get followers information
+      axios(`${url}/followers`).then((res) => setGitFollowers(res.data));
     } else {
       toggleError(true, "no such user exists !");
     }
