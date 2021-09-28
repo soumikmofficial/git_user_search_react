@@ -20,7 +20,7 @@ const AppProvider = ({ children }) => {
     axios
       .get(`${rootUrl}/rate_limit`)
       .then(({ data }) => {
-        const {
+        let {
           rate: { remaining },
         } = data;
         setRequests(remaining);
@@ -52,6 +52,7 @@ const AppProvider = ({ children }) => {
         gitRepos,
         requests,
         fetchData,
+        error,
       }}
     >
       {children}

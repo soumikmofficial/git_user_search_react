@@ -4,13 +4,15 @@ import "./home.scss";
 
 function Home() {
   return (
-    <main className="home">
+    <>
       <Navbar />
-      <Search />
-      <Info />
-      <User />
-      <Repos />
-    </main>
+      <main className="home">
+        <Search />
+        <Info />
+        <User />
+        <Repos />
+      </main>
+    </>
   );
 }
 

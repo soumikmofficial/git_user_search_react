@@ -1,5 +1,6 @@
 @import "../../global.scss";
 
 .home {
-  overflow-x: hidden;
+  position: relative;
+  top: 20vh;
 }
