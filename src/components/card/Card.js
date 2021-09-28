@@ -34,7 +34,7 @@ function Card() {
           </div>
         </header>
         <div className="bio">
-          <p>{bio}ngfnfmgnfng</p>
+          <p>{bio}</p>
         </div>
         <div className="others">
           <div className="location other-details">

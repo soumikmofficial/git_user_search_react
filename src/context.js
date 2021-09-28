@@ -36,9 +36,17 @@ const AppProvider = ({ children }) => {
     setError({ show, message });
   };
 
-  const fetchData = () => {
-    const url = `${rootUrl}/user/${gitUser}`;
-    console.log("fetch working");
+  const fetchUser = async (user) => {
+    const url = `${rootUrl}/users/${user}`;
+    toggleError();
+    const response = await axios.get(url).catch((err) => console.log(err));
+
+    if (response) {
+      setGitUser(response.data);
+      console.log(response.data);
+    } else {
+      toggleError(true, "no such user exists !");
+    }
   };
 
   useEffect(() => {
@@ -51,7 +59,7 @@ const AppProvider = ({ children }) => {
         gitFollowers,
         gitRepos,
         requests,
-        fetchData,
+        fetchUser,
         error,
       }}
     >

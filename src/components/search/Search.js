@@ -4,14 +4,14 @@ import "./search.scss";
 
 function Search() {
   const [user, setUser] = React.useState("");
-  const { requests, fetchData, error } = useGlobalContext();
+  const { requests, fetchUser, error } = useGlobalContext();
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetchData();
+    fetchUser(user);
   };
   return (
     <>
-      {error.show && <div className="error">You have no search left !</div>}
+      {error.show && <div className="error">{error.message}</div>}
       <div className="search">
         <section className="search-section">
           <form onSubmit={handleSubmit}>
