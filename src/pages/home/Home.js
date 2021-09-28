@@ -5,7 +5,7 @@ import "./home.scss";
 function Home() {
   return (
     <main className="home">
-      {/* <Navbar /> */}
+      <Navbar />
       <Search />
       <Info />
       <User />

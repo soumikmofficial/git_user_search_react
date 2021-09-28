@@ -4,10 +4,10 @@ import "./search.scss";
 
 function Search() {
   const [user, setUser] = React.useState("");
-  const { requests } = useGlobalContext();
+  const { requests, fetchData } = useGlobalContext();
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(user);
+    fetchData();
   };
   return (
     <div className="search">

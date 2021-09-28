@@ -14,6 +14,8 @@ const AppProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
   const [requests, setRequests] = useState(0);
 
+  const [error, setError] = useState({ show: false, message: "" });
+
   const getRequests = () => {
     axios
       .get(`${rootUrl}/rate_limit`)
@@ -22,8 +24,21 @@ const AppProvider = ({ children }) => {
           rate: { remaining },
         } = data;
         setRequests(remaining);
+
+        if (remaining === 0) {
+          toggleError(true, "You have exceeded your hourly limit!");
+        }
       })
       .catch((err) => console.log(err));
+  };
+
+  const toggleError = (show = false, message = "") => {
+    setError({ show, message });
+  };
+
+  const fetchData = () => {
+    const url = `${rootUrl}/user/${gitUser}`;
+    console.log("fetch working");
   };
 
   useEffect(() => {
@@ -36,6 +51,7 @@ const AppProvider = ({ children }) => {
         gitFollowers,
         gitRepos,
         requests,
+        fetchData,
       }}
     >
       {children}
