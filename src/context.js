@@ -17,8 +17,7 @@ const AppProvider = ({ children }) => {
   const [error, setError] = useState({ show: false, message: "" });
 
   const getRequests = () => {
-    axios
-      .get(`${rootUrl}/rate_limit`)
+    axios(`${rootUrl}/rate_limit`)
       .then(({ data }) => {
         let {
           rate: { remaining },
@@ -37,6 +36,7 @@ const AppProvider = ({ children }) => {
   };
 
   const fetchUser = async (user) => {
+    setLoading(true);
     const url = `${rootUrl}/users/${user}`;
     toggleError();
     const response = await axios.get(url).catch((err) => console.log(err));
@@ -47,6 +47,8 @@ const AppProvider = ({ children }) => {
     } else {
       toggleError(true, "no such user exists !");
     }
+    getRequests();
+    setLoading(false);
   };
 
   useEffect(() => {
@@ -61,6 +63,7 @@ const AppProvider = ({ children }) => {
         requests,
         fetchUser,
         error,
+        loading,
       }}
     >
       {children}

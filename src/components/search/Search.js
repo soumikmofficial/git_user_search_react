@@ -4,7 +4,7 @@ import "./search.scss";
 
 function Search() {
   const [user, setUser] = React.useState("");
-  const { requests, fetchUser, error } = useGlobalContext();
+  const { requests, fetchUser, error, loading } = useGlobalContext();
   const handleSubmit = (e) => {
     e.preventDefault();
     fetchUser(user);
@@ -21,7 +21,7 @@ function Search() {
               onChange={(e) => setUser(e.target.value)}
               value={user}
             />
-            <button type="submit">Search</button>
+            {requests > 0 && !loading && <button type="submit">Search</button>}
           </form>
         </section>
         <section className="fetch-count">

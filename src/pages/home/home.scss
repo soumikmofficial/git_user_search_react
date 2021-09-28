@@ -3,4 +3,10 @@
 .home {
   position: relative;
   top: 20vh;
+
+  .loading {
+    display: grid;
+    place-items: center;
+    height: 60vh;
+  }
 }

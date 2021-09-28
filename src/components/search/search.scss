@@ -1,7 +1,9 @@
 @import "../../global.scss";
 .error {
   text-align: center;
-  color: white;
+  color: orange;
+  font-weight: bold;
+  font-style: italic;
   font-size: 1.5rem;
   position: absolute;
   top: -6vh;
